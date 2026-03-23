@@ -17,7 +17,7 @@ pkg update && pkg upgrade -y
 
 ### 2. Instalar dependencias esenciales
 ```bash
-pkg install nodejs git proot-distro python npm config set python python3 make clang build-essential nodejs-lts -y
+pkg install nodejs git proot-distro python npm config set python make clang build-essential nodejs-lts -y
 ```
  ### Configurar el entorno para node-gyp
 Para saltarte el error del "Android NDK", a veces es necesario engañar al instalador o simplemente darle las herramientas que espera. Un truco muy efectivo en Termux es instalar binutils:
