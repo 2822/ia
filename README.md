@@ -25,22 +25,14 @@ Para saltarte el error del "Android NDK", a veces es necesario engañar al insta
 pkg install binutils
 ```
 
-   
+ ### Utiliza este comando para evitar errores:
+```bash
+mkdir -p "$HOME/.gyp" && printf "{'variables':{'android_ndk_path':''}}" > "$HOME/.gyp/include.gypi"
+```
+ 
 ### 3. Instalar Gemini CLI
 ```bash
 npm install -g @google/gemini-cli
-```
-### Instalar usando --unsafe-perm (si es necesario)
-A veces, los permisos de las carpetas de Node en Termux causan el error ENOTEMPTY que viste al principio. Intenta la instalación así:
-```bash
-npm install -g @google/gemini-cli --unsafe-perm
-```
-### 💡 Solución alternativa (La más recomendada)
-Si el error persiste debido a tree-sitter, que es muy pesado para compilar en móvil, te sugiero instalarlo de forma local en una carpeta de tu elección en lugar de global, o usar npx para ejecutarlo directamente:
-
-1. Prueba con npx: (esto descarga y ejecuta sin instalar permanentemente si solo quieres probarlo)
-```bash
-npx @google/gemini-cli
 ```
 
 ### 4. Configurar tu API Key
